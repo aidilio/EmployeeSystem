@@ -5,7 +5,7 @@ This repository contains a simple object model for calculating salaries within a
  - `Manager`
  - `SalesManager`
 
-`Employee` serves as the base class and contains most of the general functionality. `Manager` inherits from `Employee`, and `SalesManager` inherits from `Manager`. This was done to reduce code repetition. The primary functionality of the current version of the system is the `GetSalary()` method, which is defined in `Employee`. When changes are needed in how salary is calculated, child classes can override the `CalculateSalary()` method. 
+`Employee` serves as the base class and contains most of the general functionality. At the same time, `Employee` is a general non-management position. `Manager` inherits from `Employee`, and `SalesManager` inherits from `Manager`. This was done to reduce code repetition. The primary functionality of the current version of the system is the `GetSalary()` method, which is defined in `Employee`. When changes are needed in how salary is calculated, child classes can override the `CalculateSalary()` method. 
 
 Some limitations of this architecture:
  - This architecture is well-suited for systems that are not heavily dependant on relational database access. If our system were data-centric, then other approaches could be better.
